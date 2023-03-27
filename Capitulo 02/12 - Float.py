@@ -13,3 +13,5 @@
 # OBS: Imagine que queira representar o número 300000000
 # Ao invés de digitar o núemro 3 seguido de 8 zeros podemos a letra E ou e.
 # Exemplo: 3e8 ou 3E8 = 300000000 Isso representa (3 x 10 elevado a 8). Ou seja, a base é 3 e o expoente o 10 elevado a 8)
+#
+print(0.0000000000000000000001)
