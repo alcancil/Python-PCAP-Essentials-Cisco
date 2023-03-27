@@ -16,3 +16,7 @@ print(9 % 6 % 2)
 #
 # O resultado deve ser 1. Este operador tem ligação do lado esquerdo. Mas há uma exceção interessante.
 
+print(2 ** 2 ** 3)
+
+# Resultado será 256
+
