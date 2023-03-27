@@ -4,3 +4,6 @@
 
 print("I like \"Monty Python\"")
 print('I like "Monty Python"')
+print()
+print ("I'm Monty Python.")
+print ('I\'m Monty Python.')
