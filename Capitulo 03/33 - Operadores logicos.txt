@@ -1,0 +1,56 @@
+# Lógica de computador
+# Já reparou que as condições que utilizámos até agora têm sido muito simples, para não dizer bastante primitivas? As condições que utilizamos na vida # real são muito mais complexas. Vejamos esta frase:
+#
+# Se tivermos algum tempo livre, e o tempo estiver bom, vamos dar um passeio.
+#
+#
+# Utilizámos a conjunção and, o que significa que ir dar um passeio depende do cumprimento simultâneo destas duas condições. Na linguagem da lógica, 
+# tal ligação de condições é chamada uma conjunção. E agora outro exemplo:
+#
+# Se estiveres no centro comercial ou eu estiver no centro comercial, um de nós vai comprar um presente para a mãe.
+#
+#
+# A aparência da palavra or significa que a compra depende de pelo menos uma destas condições. Em lógica, tal composto é chamado uma disjunção.
+#
+# É evidente que o Python deve ter operadores para construir conjunções e disjunções. Sem eles, o poder expressivo da linguagem ficaria 
+# substancialmente enfraquecido. Eles são chamados operadores lógicos.
+#
+# and
+# Um operador de conjunção lógica em Python é a palavra and. É um operador binário com uma prioridade que é inferior à expressa pelos operadores de 
+# comparação. Permite-nos codificar condições complexas sem o uso de parêntesis como esta:
+#
+# counter > 0 and value == 100
+#
+#
+# O resultado fornecido pelo operador and pode ser determinado com base na tabela da verdade.
+#
+# Se considerarmos a conjunção de A e B, o conjunto de valores possíveis de argumentos e valores correspondentes da conjunção parece ser o seguinte:
+#
+#
+# Argumento A	Argumento B	A e B
+#   False	       False	False
+#   False	        True	False
+#   True	       False	False
+#   True	        True	True
+#
+# or
+# Um operador de disjunção é a palavra or. É um operador binário com uma prioridade inferior a and ( assim como + comparado com *). A sua tabela de 
+# verdade é a seguinte:
+#
+#
+# Argumento A	Argumento B	  A ou B
+#   False	          False	   False
+#   False	           True      True
+#    True	          False	   True
+#    True	           True	   True
+#
+# not
+# Além disso, há outro operador que pode ser aplicado para construir condições. É um operador unário que executa uma negação lógica. O seu 
+# funcionamento é simples: transforma a verdade em falsidade e a falsidade em verdade.
+#
+# Este operador é escrito como a palavra not, e a sua prioridade é muito alta: a mesma que o unário + e -. A sua tabela de verdade é simples:
+#
+#
+#  Argumento	not Argumento
+#      False	True
+#       True	False
