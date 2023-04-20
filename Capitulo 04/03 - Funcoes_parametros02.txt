@@ -1,0 +1,54 @@
+# Funções parametrizadas: continuação
+# Tente executar o código no editor.
+#
+# def message(number):
+#    print("Enter a number:", number)
+#
+# message( )
+#
+# Isto é o que verá na consola:
+# 
+# TypeError: message() missing 1 required positional argument: 'number'
+# output
+#
+#
+# Isto parece melhor, com certeza:
+#
+# def message(number):
+#    print("Enter a number:", number)
+#
+# message(1)
+#
+#
+# Além disso, comporta-se melhor. O código irá produzir o seguinte output:
+#
+# Enter a number: 1
+# output
+#
+#
+# Vê como funciona? O valor do argumento utilizado durante a invocação (1) foi passado para a função, definindo o valor inicial do parâmetro chamado number.
+#
+# Temos de o tornar sensível a uma circunstância importante.
+#
+# É válido, e possível, ter uma variável com o mesmo nome que o parâmetro de uma função.
+#
+# O snippet ilustra o fenómeno:
+#
+# def message(number):
+#     print("Enter a number:", number)
+#
+# number = 1234
+# message(1)
+# print(number)
+#
+#
+# Uma situação como esta ativa um mecanismo chamado sombreamento:
+#
+# parâmetro x sombreia qualquer variável do mesmo nome, mas...
+# ... apenas dentro da função que define o parâmetro.
+# O parâmetro chamado number é uma entidade completamente diferente da variável chamada number.
+#
+# Isto significa que o snippet acima irá produzir o seguinte output:
+#
+# Enter a number: 1
+# 1234
