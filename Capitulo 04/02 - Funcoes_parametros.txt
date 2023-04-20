@@ -1,0 +1,46 @@
+# Funções parametrizadas
+# Todo o potencial da função é revelado quando esta pode ser equipada com uma interface capaz de aceitar dados fornecidos pelo invocador. Tais dados podem modificar o comportamento da função, tornando-a mais # flexível e adaptável às condições em mudança.
+#
+# Um parâmetro é na verdade uma variável, mas há dois fatores importantes que tornam os parâmetros diferentes e especiais:
+#
+# os parâmetros existem apenas dentro das funções em que foram definidos, e o único lugar onde o parâmetro pode ser definido é um espaço entre um par de parêntesis na declaração def ;
+# atribuir um valor ao parâmetro é feito no momento da invocação da função, especificando o argumento correspondente.
+# def function(parameter):
+#    ###
+#
+#
+# Não se esqueça:
+#
+# os parâmetros vivem dentro de funções (este é o seu ambiente natural)
+# os argumentos existem fora de funções, e são portadores de valores passados para parâmetros correspondentes.
+# Existe uma fronteira clara e inequívoca entre estes dois mundos.
+#
+#
+# Vamos enriquecer a função acima com apenas um parâmetro - vamos usá-lo para mostrar ao utilizador o número de um valor que a função pede.
+#
+#
+#
+# Temos de reconstruir a declaração def - é assim que se parece agora:
+#
+# def message(number):
+#     ###
+#
+#
+# A definição especifica que a nossa função opera apenas num parâmetro chamado number. Pode utilizá-lo como uma variável comum, mas apenas dentro da função - ele não é visível em qualquer outro lugar.
+#
+# Vamos agora melhorar o corpo da função:
+#
+# def message(number):
+#     print("Enter a number:", number)
+#
+#
+# Fizemos uso do parâmetro. Nota: não atribuímos o parâmetro com qualquer valor. Está correto?
+#
+# Sim, está.
+#
+# Um valor para o parâmetro chegará a partir do ambiente da função.
+#
+# Lembre-se: especificar um ou mais parâmetros na definição de uma função também é um requisito, e tem de o cumprir durante a invocação. Deve fornecer tantos argumentos quantos os parâmetros definidos.
+#
+# Não o fazer causará um erro.
+
