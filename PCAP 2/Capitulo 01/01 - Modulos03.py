@@ -10,3 +10,6 @@ from utils import soma
 print(soma(2,3))
 
 # Perceba que agora importamos somente a funcao soma e deixamos sem importar a funcao divisao e nem a constatnet idade. 
+#
+# Obs: se mesmo assim quisermos importar todo o contudo de utils, basta utilizar *. Exemplo: import utils *
+# Obs2: se quisermos importar mais algo de utils, basta utiliza a , . Exemplo: import utils soma, idade
