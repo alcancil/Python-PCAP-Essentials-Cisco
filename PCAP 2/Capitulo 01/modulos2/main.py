@@ -6,4 +6,4 @@
 #    quando um ficheiro é importado como um módulo, a sua variável __name__ é definida como o nome do ficheiro (excluindo .py)
 
 
-import modulo, modulo02
+import modulo, modulo02, modulo03

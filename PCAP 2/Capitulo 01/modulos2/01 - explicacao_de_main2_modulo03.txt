@@ -1,0 +1,97 @@
+O seu primeiro módulo: passo 7
+
+Este módulo conterá duas funções simples, e se quiser saber quantas vezes as funções foram invocadas, precisa de um contador inicializado a zero quando o módulo estiver a ser importado.
+
+Pode fazê-lo desta maneira:
+Atualizar o ficheiro module.py
+
+counter = 0
+
+if __name__ == "__main__":
+    print("I prefer to be a module.")
+else:
+    print("I like to be a module.")
+
+module.py
+O seu primeiro módulo: passo 8
+
+A introdução de tal variável é absolutamente correta, mas pode causar efeitos secundários importantes de que deve estar ciente.
+
+Dê uma vista de olhos ao ficheiro main.py modificado.
+Atualizar o ficheiro main.py
+
+import module
+print(module.counter)
+
+main.py
+
+Como se pode ver, o ficheiro principal tenta aceder à variável counter do módulo. Isto é legal? Sim, é. É utilizável? Pode ser muito utilizável. É seguro?
+
+Depende - se confiar nos utilizadores do seu módulo, não há problema; no entanto, pode não querer que o resto do mundo veja a sua variável pessoal/privada.
+
+Ao contrário de muitas outras linguagens de programação, o Python não tem meios de lhe permitir esconder tais variáveis dos olhos dos utilizadores do módulo.
+
+Apenas pode informar os seus utilizadores que esta é a sua variável, que podem lê-la, mas que não a devem modificar em circunstância alguma.
+
+Isto é feito precedendo o nome da variável com _ (um underscore) ou __ (dois underscores), mas lembre-se, é apenas uma convenção. Os utilizadores do seu módulo podem obedecer-lhe ou não.
+
+Claro, seguiremos a convenção. Agora vamos colocar duas funções no módulo - elas vão avaliar a soma e o produto dos números recolhidos numa lista.
+
+Além disso, vamos acrescentar alguns ornamentos e remover quaisquer restos supérfluos.
+
+
+O seu primeiro módulo: passo 9
+
+Muito bem. Vamos escrever um código novinho em folha no nosso ficheiro module.py . O módulo atualizado está pronto aqui:
+#!/usr/bin/env python3 
+
+""" module.py - an example of a Python module """
+
+__counter = 0
+
+
+def suml(the_list):
+    global __counter
+    __counter += 1
+    the_sum = 0
+    for element in the_list:
+        the_sum += element
+    return the_sum
+
+
+def prodl(the_list):
+    global __counter    
+    __counter += 1
+    prod = 1
+    for element in the_list:
+        prod *= element
+    return prod
+
+
+if __name__ == "__main__":
+    print("I prefer to be a module, but I can do some tests for you.")
+    my_list = [i+1 for i in range(5)]
+    print(suml(my_list) == 15)
+    print(prodl(my_list) == 120)
+
+module.py
+
+Alguns elementos precisam de alguma explicação, pensamos nós:
+
+    a linha começando com #! tem muitos nomes - pode ser chamada shabang, shebang, hashbang, poundbang ou até mesmo hashpling (não nos pergunte porquê). O nome em si não significa nada aqui - o seu papel é mais importante. Do ponto de vista do Python, é apenas um comentário visto começar com #. Para Unix e Unix-like SOs (incluindo MacOS) tal linha instrui o SO a como executar o conteúdo do ficheiro (por outras palavras, que programa precisa de ser lançado para interpretar o texto). Em alguns ambientes (especialmente aqueles ligados a servidores web) a ausência dessa linha causará problemas;
+    uma string (talvez uma multilinha) colocada antes de qualquer instrução de módulo (incluindo importações) é chamada a doc-string, e deve explicar brevemente a finalidade e o conteúdo do módulo;
+    as funções definidas dentro do módulo (suml() e prodl()) estão disponíveis para importação;
+    utilizámos a variável __name__ para detetar quando o ficheiro é executado de forma autónoma, e aproveitou esta oportunidade para realizar alguns testes simples.
+
+O seu primeiro módulo: passo 10
+
+Agora é possível usar o módulo atualizado - esta é uma maneira:
+Atualizar o ficheiro main.py
+
+from module import suml, prodl
+
+zeroes = [0 for i in range(5)]
+ones = [1 for i in range(5)]
+print(suml(zeroes))
+print(prodl(ones))
+
