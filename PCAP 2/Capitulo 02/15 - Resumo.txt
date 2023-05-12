@@ -1,0 +1,77 @@
+
+Key takeaways
+
+1. As strings de Python são sequências imutáveis e podem ser indexadas, sliced (cortadas) e iteradas como qualquer outra sequência, além de serem sujeitas aos operadores in e not in . Existem dois tipos de strings em Python:
+
+    strings one-line, que não podem cruzar limites de linha - denotamo-las usando apóstrofes ('string') ou aspas ("string")
+    strings multi-line, que ocupam mais de uma linha de source code, delimitadas por trígrafos:
+
+    '''
+    string
+    '''
+
+
+    ou
+    """
+    string
+    """
+
+
+2. O comprimento de uma string é determinado pela função len() . O caratere de escape (\) não é contado. Por exemplo:
+print(len("\n\n"))
+
+
+tem como output 2.
+
+3. As strings podem ser concatenadas usando o operador + e replicadas usando o operador * . Por exemplo:
+asterisk = '*'
+plus = "+"
+decoration = (asterisk + plus) * 4 + asterisk
+print(decoration)
+
+
+tem como output *+*+*+*+*.
+
+4. O par de funções chr() e ord() pode ser utilizado para criar um caratere usando o seu codepoint, e para determinar um codepoint correspondente a um caratere. Ambas as expressões a seguir são sempre verdadeiras:
+chr(ord(character)) == character
+ord(chr(codepoint)) == codepoint
+
+
+5. Algumas outras funções que podem ser aplicadas a strings são:
+
+    list() — criar uma lista composta por todos os carateres da string;
+    max() — encontrar o caratere com o codepoint máximo;
+    min() — encontrar o caratere com o codepoint mínimo;
+
+
+6. O método chamado index() encontra o index de uma determinada substring dentro da string.
+
+Exercício 1
+
+Qual é o comprimento da seguinte string supondo que não haja espaços em branco entre as aspas?
+"""
+"""
+
+
+1
+
+
+Exercício 2
+
+Qual é o output esperado do seguinte código?
+s = 'yesteryears'
+the_list = list(s)
+print(the_list[3:6])
+
+
+['t', 'e', 'r']
+
+
+Exercício 3
+
+Qual é o output esperado do seguinte código?
+for ch in "abc":
+    print(chr(ord(ch) + 1), end='')
+
+
+bcd
