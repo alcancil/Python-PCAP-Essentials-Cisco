@@ -1,0 +1,55 @@
+
+Key takeaways
+
+1. Um repositório (ou repo para abreviar) concebido para recolher e partilhar código Python gratuito existe e funciona sob o nome Python Package Index (PyPI) embora também seja provável que o encontre com o nome de nicho The Cheese Shop. O site da Loja está disponível em https://pypi.org/.
+
+2. Para fazer uso da The Cheese Shop foi criada a ferramenta especializada chamada pip (pip installs packages enquanto pip significa... ok, não se importe). Como o pip pode não ser implantado como parte da instalação padrão Python, é possível que tenha de o instalar manualmente. O pip é uma ferramenta de consola.
+
+3. Para verificar a versão do pip, devem ser emitidos os seguintes comandos:
+pip --version
+
+
+ou
+pip3 --version
+
+
+Verifique você mesmo qual destes funciona para si no ambiente do seu sistema operativo.
+
+4. A lista das principais atividades de pip é a seguinte:
+
+    pip help operation - mostra uma breve descrição do pip;
+    pip list - mostra a lista de pacotes atualmente instalados;
+    pip show package_name - mostra informações de package_name incluindo as dependências do pacote;
+    pip search anystring - pesquisa através das diretorias PyPI a fim de encontrar pacotes cujo nome contenha anystring;
+    pip install name - instala o name em todo o sistema (esperar problemas quando não tem direitos administrativos);
+    pip install --user name - instala o name apenas para si; nenhum outro utilizador da sua plataforma será capaz de o utilizar;
+    pip install -U name - atualiza o pacote previamente instalado;
+    pip uninstall name - desinstala o pacote instalado anteriormente;
+
+
+Exercício 1
+
+De onde vem o nome “The Cheese Shop”?
+
+É uma referência a um antigo sketch dos Monty Python com o mesmo nome.
+
+
+Exercício 2
+
+Porque devo assegurar-me de qual dos pip e pip3 funciona para mim?
+
+Quando o Python 2 e o Python 3 coexistem no seu SO, é provável que o pip identifique a instância de pip a trabalhar apenas com pacotes Python 2.
+
+
+Exercício 3
+
+Como posso determinar se o meu pip funciona com Python 2 ou Python 3?
+
+pip --version dir-lhe-á isso.
+
+
+Exercício 4
+
+Infelizmente, não tenho direito administrativo. O que devo fazer para instalar um pacote em todo o sistema?
+
+Tem de perguntar ao seu sysadmin - não tente piratear o seu SO!
