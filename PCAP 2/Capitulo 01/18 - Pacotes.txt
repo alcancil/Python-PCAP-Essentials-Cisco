@@ -1,0 +1,7 @@
+Ir para a pasta pacotes. Verificar o arquivo o seu primeiro pacote.docx
+Testar os arquivos: 
+main.py
+main2.py
+main3.py
+main4.py
+main5.py
