@@ -1,0 +1,18 @@
+
+Key takeaways
+
+1. As strings são ferramentas chave no processamento moderno de dados, uma vez que a maioria dos dados úteis são na realidade strings. Por exemplo, usar um motor de busca web (que parece bastante trivial nos dias de hoje) utiliza processamento de strings extremamente complexo e complicado, envolvendo quantidades inimagináveis de dados.
+
+2. A comparação de strings de uma forma rigorosa (como faz o Python) pode ser muito insatisfatória quando se trata de pesquisas avançadas (por exemplo, durante extensas consultas a bases de dados). Em resposta a esta exigência, foram criados e implementados vários algoritmos de comparação de strings fuzzy (difusas). Estes algoritmos são capazes de encontrar strings que não são iguais no sentido Python, mas são semelhantes.
+
+Um desses conceitos é a distância Hamming, que é usada para determinar a semelhança de duas strings. Se este problema lhe interessa, pode encontrar mais informações aqui: https://en.wikipedia.org/wiki/Hamming_distance. Outra solução do mesmo tipo, mas baseada numa suposição diferente, é a distância Levenshtein descrita aqui: https://en.wikipedia.org/wiki/Levenshtein_distance.
+
+
+
+3. Outra forma de comparar strings é encontrar a sua semelhança acústica, o que significa um processo que leva a determinar se duas strings soam de forma semelhante (como "raise" e "race"). Essa semelhança deve ser estabelecida para cada língua (ou mesmo dialeto) separadamente.
+
+Um algoritmo utilizado para efetuar tal comparação para a língua inglesa chama-se Soundex e foi inventado - não vai acreditar - em 1918. Pode descobrir mais informações aqui: https://en.wikipedia.org/wiki/Soundex.
+
+4. Devido à limitada precisão de dados nativos float e inteiros, é por vezes razoável armazenar e processar valores numéricos enormes como strings. Esta é a técnica que o Python utiliza quando se o força a funcionar com um número inteiro constituído por um número muito grande de dígitos.
+
+
