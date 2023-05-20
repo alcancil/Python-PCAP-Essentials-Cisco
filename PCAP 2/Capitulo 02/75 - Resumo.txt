@@ -1,0 +1,43 @@
+
+Key takeaways
+
+1. Algumas exceções abstratas incorporadas em Python são:
+
+    ArithmeticError,
+    BaseException,
+    LookupError.
+
+
+2. Algumas exceções concretamente incorporadas em Python são:
+
+    AssertionError,
+    ImportError,
+    IndexError,
+    KeyboardInterrupt,
+    KeyError,
+    MemoryError,
+    OverflowError.
+
+
+
+Exercício 1
+
+Qual das exceções irá utilizar para proteger o seu código de ser interrompido pelo uso do teclado?
+
+KeyboardInterrupt
+
+
+Exercício 2
+
+Qual é o nome da exceção mais geral de todas em Python?
+
+BaseException
+
+
+Exercício 3
+
+Qual das excepções será levantada através da seguinte avaliação mal sucedida?
+huge_value = 1E250 ** 2
+
+
+OverflowError
