@@ -1,0 +1,69 @@
+Key takeaways
+
+1. Um método é uma função incorporada dentro de uma classe. O primeiro (ou único) parâmetro de cada método é normalmente nomeado self, que se destina a identificar o objeto para o qual o método é invocado a fim de aceder às propriedades do objeto ou invocar os seus métodos.
+
+2. Se uma classe contém um construtor (um método chamado __init__) não pode devolver qualquer valor e não pode ser invocada diretamente.
+
+3. Todas as classes (mas não objetos) contêm uma propriedade chamada __name__, que armazena o nome da classe. Além disso, uma propriedade chamada __module__ armazena o nome do módulo no qual a classe foi declarada, enquanto a propriedade nomeada __bases__ é um tuple contendo as superclasses de uma classe.
+
+Por exemplo:
+class Sample:
+    def __init__(self):
+        self.name = Sample.__name__
+    def myself(self):
+        print("My name is " + self.name + " living in a " + Sample.__module__)
+
+
+obj = Sample()
+obj.myself()
+
+
+Output do código:
+My name is Sample living in a __main__
+
+output
+
+
+Exercício 1
+
+A declaração da classe Snake é dada abaixo. Enriqueça a classe com um método chamado increment(), adicionando 1 à __victims propriedade.
+
+class Snake:
+    def __init__(self):
+        self.victims = 0
+
+class Snake:
+    def __init__(self):
+        self.victims = 0
+
+    def increment(self):
+        self.victims += 1
+
+
+
+Exercício 2
+
+Redefina o construtor de classe Snake , para que tenha um parâmetro para inicializar o campo victims com um valor passado para o objeto durante a construção.
+
+class Snake:
+    def __init__(self, victims):
+        self.victims = victims	
+
+
+Exercício 3
+
+Consegue prever o output do seguinte código?
+class Snake:
+    pass
+
+
+class Python(Snake):
+    pass
+
+
+print(Python.__name__, 'is a', Snake.__name__)
+print(Python.__bases__[0].__name__, 'can be', Python.__name__)
+
+
+Python is a Snake
+Snake can be Python
